@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using Tarker.Booking.Domain.Entities.Booking;
 using Tarker.Booking.Domain.Entities.Customer;
 using Tarker.Booking.Domain.Entities.User;
 
-namespace Tarker.Booking.Application.Interfaces
+namespace Tarker.Booking.Application.DataBase
 {
     public interface IDataBaseService
     {
@@ -16,8 +16,6 @@ namespace Tarker.Booking.Application.Interfaces
         DbSet<BookingEntity> Booking { get; set; }
         DbSet<CustomerEntity> Customer { get; set; }
 
-
         Task<bool> SaveAsync();
     }
-
 }
